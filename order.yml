@@ -1,24 +1,24 @@
 spring:
- application:
-   name: order
- datasource:
-   driver-class-name: com.mysql.cj.jdbc.Driver
-   username: root
-   password: 123456
-   url: jdbc:mysql://localhost:3306/springcloud_sell?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
- redis:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/springcloud_sell?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+  redis:
     host: 127.0.0.1
     port: 6379
     password: 123456
- rabbitmq:
+  rabbitmq:
     host: 127.0.0.1
     port: 5672
     username: root
     password: 123456
- jpa:
-   show-sql: true
-eureka:
- client:
-   service-url:
-     defaultZone: http://localhost:8761/eureka/
+  jpa:
+    show-sql: true
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/#这个要再应用端先执行，因为是先到eureka，再到git
 env: order-env
