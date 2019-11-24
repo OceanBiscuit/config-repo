@@ -17,8 +17,8 @@ spring:
     password: 123456
   jpa:
     show-sql: true
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka/#这个要再应用端先执行，因为是先到eureka，再到git
+eureka:
+ client:
+   service-url:
+     defaultZone: http://localhost:8761/eureka/
 env: orderenv
