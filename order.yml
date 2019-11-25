@@ -1,5 +1,5 @@
 env:
-  orderenv
+  order
 spring:
   application:
     name: order
@@ -17,5 +17,9 @@ spring:
     port: 5672
     username: root
     password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
   jpa:
     show-sql: true
