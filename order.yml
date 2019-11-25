@@ -1,4 +1,5 @@
-env: orderenv
+env:
+  orderenv
 spring:
   application:
     name: order
