@@ -1,0 +1,20 @@
+zuul:
+#全部服务忽略敏感头(全部服务都可以传递cookie)，这个很重要，因为zull是不允许传递cookie的
+  sensitive-headers: 
+  routes:
+  # /myProduct/product/list -> /product/product/list
+    aaaaaa:
+      path: /myProduct/**
+      serviceId: product
+      sensitiveHeaders:
+#简洁写法
+#    product: /myProduct/**
+#  排除某些路由,这里我们先不用配置
+#  ignored-patterns:
+#    - /**/product/listForOrder
+management:
+  security:
+    enabled: false    
+ribbon:
+  ReadTimeout: 5000
+  SocketTimeout: 5000
